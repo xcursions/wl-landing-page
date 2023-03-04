@@ -5,153 +5,191 @@
   display: none;
 }
 
-.select-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(58, 56, 56, 0.507);
+.modalButton {
+  width: 100% !important;
+  padding: 0px !important;
+}
+
+.modalButton button {
+  width: 100% !important;
+  padding: 0px !important;
+}
+
+.select_modals {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden;
+  z-index: 201 !important;
+  transition: 800ms ease;
+}
+
+.select_modals_overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(246, 245, 245, 0.206);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  z-index: 19987000;
+  z-index: 202 !important;
   transition: 800ms ease;
+  cursor: pointer;
 }
 
-.select-modal-card {
-  position: relative;
-  background: rgb(255, 255, 255);
-  width: 390px;
-  height: auto;
-  padding: 17px 19px;
+.select_modals_cards {
+  position: relative !important;
+  background: $primary;
+  color: #fff;
+  width: 400px;
+  margin-left: auto;
+  height: 100% !important;
   display: block;
-  /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; */
-  border-radius: 30px;
+  /* border-radius: 30px; */
   box-shadow: 3px 6px 10px 0 rgb(0 102 245 / 7%);
+  z-index: 401 !important;
+  animation-name: slideInRight;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  /* padding-bottom: 40px; */
 }
 
-.select-modal-card .close-select-button {
-  text-align: right;
+.higherModal {
+  z-index: 4000001 !important;
 }
 
-.select-modal-card .close-select-button i {
-  color: #1e1d1d;
-  font-size: 27px;
-  cursor: pointer;
-  padding: 2px;
+.select_modals_cards.slideOUT {
+  animation-name: slideOutLeft;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
 }
 
-.select-modal .select-modal-search {
-  position: relative;
-  display: block;
-  margin-top: 0px;
-  width: 70%;
-  box-sizing: border-box;
+.select-modal-header {
+  width: 100%;
+  background: $primary;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  padding: 15px;
 }
 
-.select-modal .select-modal-search label {
+.select-modal-header h5 {
+  margin: 0px;
   font-style: normal;
-  font-weight: 500;
-  font-size: 13.4px;
-  line-height: 26px;
-  color: var(--mainYellowColor);
+  font-weight: 700;
+  font-size: 20px;
 }
 
-.select-modal .select-modal-search {
+.select-modal-header i {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.select_modals_body {
   position: relative;
+  height: 100% !important;
+  width: 100% !important;
   display: block;
-  margin-top: 0px;
-  width: 95%;
-  box-sizing: border-box;
-}
-
-.select-modal-body {
-  position: relative;
-  margin-top: 20px;
-  height: 320px;
-}
-
-.select-modal-content {
-  position: relative;
-  height: 100%;
   overflow-y: scroll;
-  scrollbar-width: thin;
+  padding: 10px;
+  padding-bottom: 80px;
+  padding: 40px 13px;
 }
 
-.select-modal-body ::-webkit-scrollbar {
-  width: 4px;
+.select_modals_body::-webkit-scrollbar {
+  width: 0px;
 }
 
-/* Track */
-.select-modal-body ::-webkit-scrollbar-track {
-  /* box-shadow: inset 0 0 5px grey; */
-  border-radius: 30px;
+.select_modals_body label {
+  color: #fff !important;
 }
 
-.select-modal-body ::-webkit-scrollbar-track {
-  background-color: #e6e6e6;
+.select_modals_body select,
+.select_modals_body select:focus,
+.select_modals_body textarea,
+.select_modals_body textarea:focus,
+.select_modals_body input:focus,
+.select_modals_body input {
+  background: darken($color: $primary, $amount: 20%);
+  color: #fff !important;
 }
 
-/* Handle */
-.select-modal-body ::-webkit-scrollbar-thumb {
-  background: var(--mainYellowColor);
-  border-radius: 30px;
+.select_modals_body .card,
+.select_modals_body .card-body,
+.select_modals_body .card-header {
+  background: lighten($color: $primary, $amount: 10%);
+  color: #fff !important;
 }
 
-.select-modal-body ::-webkit-scrollbar-button {
-  width: 5px;
-  height: 0px;
-}
-
-.select-modal-item {
-  margin-bottom: 13px;
-  backdrop-filter: blur(121.508px);
-  border-radius: 229.261px;
-  padding: 7px 9px;
-  cursor: pointer;
-}
-
-.select-modal-item:hover {
-  background: rgba(231, 230, 230, 0.507);
-}
-
-.select-modal-item.selectedItem {
-  background: #fff5e0;
-}
-
-.select-modal-item p {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 0px;
-}
-
-.select-modal-item p img {
-  width: 25px;
-}
-
-.select-modal-item p span {
-  margin-left: 14px;
+.modalTitle {
   font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 22px;
-
-  color: #717171;
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 43px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.selectModalitem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+      0deg,
+      rgba(221, 221, 221, 0.2),
+      rgba(221, 221, 221, 0.2)
+    ),
+    #ffffff;
+  border: 3.41431px solid #ffffff;
+  box-shadow: 0px 4.55241px 10.2429px 1.1381px rgba(154, 154, 154, 0.25);
+  border-radius: 14.7953px;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
-.select-modal-item p small {
-  margin-left: 11px;
-  font-size: 12px;
-  color: #afaeae;
-  font-weight: bold;
+.selectModalitemLeft {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.selectModalitem img {
+  width: 40px;
+}
+
+.selectModalitem p {
+  /* margin-left: -140px; */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 30px;
+  color: #000000;
+  text-align: left;
+}
+
+.selectModalitem .checkDiv {
+  width: 25.04px;
+  height: 25.04px;
+  border: 1.1381px solid #000000;
+  border-radius: 5.69052px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectModalitem .checkDiv.selectedItem {
+  background: #000;
+}
+
+.selectModalitem .checkDiv i {
+  color: #ffffff;
+  font-size: 13px;
 }
 
 .fixed-right-modal {
@@ -402,6 +440,18 @@ body.dark-mode .alert-modal-card {
   z-index: 9994;
 }
 
+.alert-modal.overAll .alert-modal-card {
+  width: 400px;
+}
+
+.alert-modal.overAll .alert-modal-card .alert-modal-body h4 {
+  font-size: 1.5rem;
+}
+
+.alert-modal.overAll .alert-modal-body p {
+  font-size: 1.2rem;
+}
+
 #loginModal.alertPOP .alert-modal-card {
   width: 520px;
 }
@@ -586,38 +636,20 @@ button.white-button {
 }
 
 @media screen and (max-width: 600px) {
-  .select-modal-card {
-    width: 98%;
-    height: auto;
-    padding: 17px 19px;
+  .select_modals_cards {
+    position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    bottom: 0px !important;
+    width: 100%;
+    height: 100vh !important;
+    overflow: hidden;
+    padding-bottom: 10px !important;
   }
 
-  .select-modal .select-modal-search {
-    width: 90%;
-  }
-
-  .select-modal .select-modal-search {
-    width: 95%;
-  }
-
-  .select-modal-body {
-    height: 320px;
-  }
-
-  .select-modal-item {
-    padding: 7px 5px;
-  }
-
-  .select-modal-item p img {
-    width: 20px;
-  }
-
-  .select-modal-item p span {
-    font-size: 16px;
-  }
-
-  .select-modal-item p small {
-    font-size: 9px;
+  .modalTitle {
+    font-size: 23px;
+    line-height: 43px;
   }
 
   .fixed-right-modal-card {

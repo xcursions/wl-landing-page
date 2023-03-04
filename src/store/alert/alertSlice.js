@@ -1,14 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  logoutPopUp: {
+  pageLoading: {
     status: false,
+    message: "Please wait...",
+  },
+
+  alertPopUp: {
+    status: false,
+    type: "SUCCESS",
+    title: "Successful",
+    desc: "You are subscribed",
     payload: null,
   },
 
-  loginModal: false,
-  registerModal: false,
-  forgotPasswordModal: false,
   mobileMenu: false,
   sideBarMenu: false,
 };
@@ -24,16 +29,14 @@ const alertSlice = createSlice({
       };
     },
 
-    setLoginModal: (state, { payload }) => {
-      state.loginModal = payload;
-    },
-
-    setRegisterModal: (state, { payload }) => {
-      state.registerModal = payload;
-    },
-
-    setForgotPasswordModal: (state, { payload }) => {
-      state.forgotPasswordModal = payload;
+    setAlertPopUp: (state, { payload }) => {
+      state.alertPopUp = {
+        status: payload.status,
+        type: payload.type,
+        title: payload.title,
+        desc: payload.desc,
+        payload: payload.payload,
+      };
     },
 
     setMobileMenu: (state, { payload }) => {
@@ -52,12 +55,7 @@ const alertSlice = createSlice({
   },
 });
 
-export const {
-  setLoginModal,
-  setRegisterModal,
-  setForgotPasswordModal,
-  setMobileMenu,
-  setSideBarMenu,
-} = alertSlice.actions;
+export const { setAlertPopUp, setPageLoading, setMobileMenu, setSideBarMenu } =
+  alertSlice.actions;
 
 export default alertSlice.reducer;

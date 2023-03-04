@@ -1,15 +1,13 @@
 import React from "react";
 import "./alert.scss";
-import ForgotPasswordModal from "./ForgotPasswordModal";
-import LoginModal from "./LoginModal";
-import RegisterModal from "./RegisterModal";
+import AlertModal from "./AlertModal";
+import ModalLoading from "./ModalLoading";
 
 const AllModal = () => {
   return (
     <>
-      <LoginModal />
-      <RegisterModal />
-      <ForgotPasswordModal />
+      <AlertModal />
+      <ModalLoading />
     </>
   );
 };

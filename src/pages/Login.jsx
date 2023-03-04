@@ -2,6 +2,7 @@ import React from "react";
 
 import happyAfrican from "../assets/images/happy-african.png";
 import wave from "../assets/images/wave.png";
+import MailchimpForm from "../components/home/MailchimpForm";
 
 const Login = () => {
   return (
@@ -34,7 +35,9 @@ const Login = () => {
             username.
           </p>
 
-          <form action="">
+          <MailchimpForm />
+
+          {/* <form action="">
             <div className="row">
               <div className="col-md-6 mb-3">
                 <div className="form-group">
@@ -58,7 +61,7 @@ const Login = () => {
                 <button className="xcursionButton">Join waitlist</button>
               </div>
             </div>
-          </form>
+          </form> */}
         </div>
       </div>
     </div>

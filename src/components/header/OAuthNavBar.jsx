@@ -50,10 +50,10 @@ const OAuthNavBar = () => {
             <NavLink to="/access" className="top_link">
               Save & Travel
             </NavLink>
-            <NavLink to="/about" className="top_link">
+            <NavLink to="/" className="top_link">
               About Us
             </NavLink>
-            <NavLink to="/about" className="top_link">
+            <NavLink to="/" className="top_link">
               FAQs
             </NavLink>
           </div>
@@ -64,7 +64,7 @@ const OAuthNavBar = () => {
               className="hamburgar"
               onClick={() => dispatch(setMobileMenu(true))}
             >
-              <i class="bx bx-menu"></i>
+              <i className="bx bx-menu"></i>
             </div>
           </div>
         </div>
