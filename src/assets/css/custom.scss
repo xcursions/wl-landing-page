@@ -247,6 +247,7 @@
 .loginWrapperGridLeftContent button {
   width: 250px !important;
   border-radius: 2px !important;
+  display: none;
 }
 
 .loginWrapperGridRight {
@@ -832,15 +833,15 @@
   .accessWrapperGrid {
     height: 100%;
     display: block;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 0px;
+    padding-right: 0px;
     padding-top: 0px;
   }
 
-  .loginWrapperGridLeft,
-  .accessWrapperGridLeft {
-    display: none;
-  }
+  // .loginWrapperGridLeft,
+  // .accessWrapperGridLeft {
+  //   display: none;
+  // }
 
   .loginWrapperGridRight,
   .accessWrapperGrid .loginWrapperGridRight {
@@ -871,13 +872,99 @@
     padding-top: 0px;
     padding-bottom: 70px !important;
   }
-}
 
-@media screen and (max-width: 650px) {
+  .loginWrapper,
+  .accessWrapper {
+    margin-top: 0px;
+    height: auto !important;
+    overflow: unset;
+  }
+
   .loginWrapperGrid {
-    padding-left: 30px;
-    padding-right: 30px;
+    height: 100vh !important;
+  }
+
+  .loginWrapperGridLeft {
+    padding-top: 70px;
+    height: auto !important;
+  }
+
+  .loginWrapperGridLeftFlex {
+    flex-direction: column-reverse;
+    justify-content: center;
+    height: auto !important;
+    // margin-top: 50px;
+  }
+
+  .loginWrapperGridLeftImage {
+    height: auto !important;
+  }
+
+  .loginWrapperGridLeftContent {
+    margin-left: 0px;
+    padding: 50px 40px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .loginWrapperGridLeftContent button {
+    // width: 250px !important;
+    // border-radius: 2px !important;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .loginWrapperGridRight {
+    text-align: center;
+    margin-top: 0px;
+    height: auto !important;
+    margin-bottom: 70px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .accessWrapperGrid {
+    padding-bottom: 0px !important;
+  }
+
+  .accessWrapperGrid .loginWrapperGridRight {
     padding-top: 0px;
+    margin-bottom: 0px !important;
+  }
+
+  .mc__form-container {
+    margin-bottom: 90px !important;
+  }
+
+  .oauth-wrapper label {
+    text-align: left;
+  }
+
+  .oAuthNavBarFlexButton button {
+    display: none;
+  }
+
+  .loginWrapperGridLeftContent h2 {
+    font-size: 70px;
+    line-height: 95px;
+  }
+}
+@media screen and (max-width: 650px) {
+  html,
+  body {
+    width: 100% !important;
+    overflow-x: hidden;
+  }
+
+  .loginWrapperGridLeftImage .imageWoman {
+    margin-left: 130px;
+  }
+
+  .loginWrapperGridLeftImage .imageWave {
+    width: 500px;
   }
 
   .accessWrapperGrid .loginWrapperGridRight p {
@@ -887,14 +974,44 @@
   }
 
   .accessWrapperGridRightBottom {
-    margin-top: 50px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    column-gap: 20px;
+    padding-bottom: 0px;
   }
 
-  .accessWrapperGridRightBottomItem:nth-child(2) div {
-    border-right: none;
+  .accessWrapperGridRightBottomItem {
+    padding: 10px 0px;
+    display: block !important;
+    text-align: left;
   }
+
+  .accessWrapperGridRightBottomItem:last-child div {
+    padding-right: 0px;
+  }
+  // .accessWrapperGridRightBottomItem img {
+  //   width: 35px;
+  // }
+
+  .accessWrapperGridRightBottomItem h4 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .accessWrapperGridRightBottomItem p {
+    font-size: 10px !important;
+  }
+
+  .accessWrapperGridRightBottomItem div {
+    text-align: left;
+  }
+
+  // .accessWrapperGridRightBottom {
+  //   margin-top: 50px;
+  //   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  //   column-gap: 20px;
+  // }
+
+  // .accessWrapperGridRightBottomItem:nth-child(2) div {
+  //   border-right: none;
+  // }
 
   .loginWrapperGridRightFlex {
     display: block !important;
@@ -923,11 +1040,19 @@
     padding-top: 0px;
   }
 
+  .loginWrapperGridLeftContent {
+    padding: 50px 20px 10px;
+  }
+
+  .loginWrapperGridLeftContent h2 {
+    font-size: 58px;
+    line-height: 50px;
+  }
+
   .loginWrapperGridRight {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 30px;
-    padding-bottom: 0px;
     // text-align: center;
   }
 
@@ -939,26 +1064,40 @@
     text-align: left;
   }
 
+  .accessWrapperGrid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .accessWrapperGrid .loginWrapperGridRight {
+    margin-top: 0px !important;
+  }
+
+  .accessWrapperGridLeft {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .accessWrapperGrid .loginWrapperGridRight {
     padding-top: 40px;
   }
 
-  .accessWrapperGridRightBottomItem:nth-child(1) div {
-    border-right: none;
-  }
+  // .accessWrapperGridRightBottomItem:nth-child(1) div {
+  //   border-right: none;
+  // }
 
-  .accessWrapperGridRightBottomItem img {
-    width: 55px;
-  }
+  // .accessWrapperGridRightBottomItem img {
+  //   width: 55px;
+  // }
 
-  .accessWrapperGridRightBottomItem h4 {
-    font-size: 19px !important;
-    margin-top: 20px;
-  }
+  // .accessWrapperGridRightBottomItem h4 {
+  //   font-size: 19px !important;
+  //   margin-top: 20px;
+  // }
 
-  .accessWrapperGridRightBottomItem p {
-    font-size: 16px !important;
-  }
+  // .accessWrapperGridRightBottomItem p {
+  //   font-size: 16px !important;
+  // }
 }
 
 .loginWrapperGridRight form.mc__form h3 {

@@ -5,6 +5,16 @@ import wave from "../assets/images/wave.png";
 import MailchimpForm from "../components/home/MailchimpForm";
 
 const Login = () => {
+  const scrollElement = (e, ele) => {
+    e.preventDefault();
+
+    let element = document.getElementById(ele);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="loginWrapper">
       <div className="loginWrapperGrid">
@@ -24,11 +34,16 @@ const Login = () => {
                 eu gravida enim. Proin magna orci, commodo in fermentum a,
                 consequat non augue.
               </p>
-              {/* <button className="xcursionButton">Join waitlist</button> */}
+              <button
+                onClick={(e) => scrollElement(e, "loginWrapperGridRight")}
+                className="xcursionButton"
+              >
+                Join waitlist
+              </button>
             </div>
           </div>
         </div>
-        <div className="loginWrapperGridRight">
+        <div className="loginWrapperGridRight" id="loginWrapperGridRight">
           <h3>Get early access!</h3>
           <p>
             Be one of the first to create a profile and claim a premium

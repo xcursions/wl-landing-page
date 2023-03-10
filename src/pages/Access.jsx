@@ -1,6 +1,10 @@
 import React from "react";
 
-import image from "../assets/images/image.png";
+import image1 from "@/assets/images/image1.png";
+import image2 from "@/assets/images/image2.png";
+import image3 from "@/assets/images/image3.png";
+import image4 from "@/assets/images/image4.png";
+import image5 from "@/assets/images/image5.png";
 import businessTrip from "../assets/images/business-trip.png";
 import Group from "../assets/images/Group.png";
 import roadMap from "../assets/images/road-map.png";
@@ -12,23 +16,23 @@ const Access = () => {
         <div className="accessWrapperGridLeft">
           <div className="accessWrapperGridLeftImages">
             <div className="img_1">
-              <img src={image} alt="xcursion" />
+              <img src={image1} alt="xcursion" />
               <p>Kigali</p>
             </div>
             <div className="img_2">
-              <img src={image} alt="xcursion" />
+              <img src={image2} alt="xcursion" />
               <p>Maldives</p>
             </div>
             <div className="img_3">
-              <img src={image} alt="xcursion" />
+              <img src={image3} alt="xcursion" />
               <p>Beirut</p>
             </div>
             <div className="img_4">
-              <img src={image} alt="xcursion" />
+              <img src={image4} alt="xcursion" />
               <p>Dubai</p>
             </div>
             <div className="img_5">
-              <img src={image} alt="xcursion" />
+              <img src={image5} alt="xcursion" />
               <p>Zanzibar</p>
             </div>
           </div>
