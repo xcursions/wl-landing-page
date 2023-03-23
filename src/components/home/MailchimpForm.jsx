@@ -3,9 +3,6 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 import { useDispatch } from "react-redux";
 import { validEmail } from "../../global/customFunctions";
 import { setAlertPopUp, setPageLoading } from "../../store/alert/alertSlice";
-// import PrimaryCTAButton from "../../ui/PrimaryCTAButton/PrimaryCTAButton";
-// import { useGHStContext } from "../../../utils/ContextProvider";
-// import InputField from "../../ui/InputField/InputField";
 
 const CustomForm = ({ status, message, onValidated }) => {
   const dispatch = useDispatch();
